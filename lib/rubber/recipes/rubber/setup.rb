@@ -797,7 +797,7 @@ namespace :rubber do
   set :gem_helper_script, <<-'ENDSCRIPT'
     gem_cmd = ARGV[0]
     gems = ARGV[1..-1]
-    cmd = "gem #{gem_cmd} --no-rdoc --no-ri"
+    cmd = "gem #{gem_cmd} --no-document"
 
     to_install = {}
     to_install_ver = {}
