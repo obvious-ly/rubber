@@ -52,7 +52,7 @@ namespace :rubber do
         # this returns exit code even if pid has already died, and thus triggers fail fast shell error
         wait $bg_pid
 
-        echo "export RUBYOPT=rubygems\nexport PATH=#{rubber_env.ruby_path}/bin:$PATH" > /etc/profile.d/ruby.sh
+        echo "export RUBYOPT=rrubygems\nexport PATH=#{rubber_env.ruby_path}/bin:$PATH" > /etc/profile.d/ruby.sh
         echo "--- \ngem: --no-ri --no-rdoc" > /etc/gemrc
         update-alternatives --install /usr/bin/ruby ruby #{rubber_env.ruby_path}/bin/ruby 100
         update-alternatives --set ruby #{rubber_env.ruby_path}/bin/ruby
